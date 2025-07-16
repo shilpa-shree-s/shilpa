@@ -5,18 +5,20 @@
 }
 
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
-    --accent-color: #f59e0b;
-    --text-primary: #ffffff;
-    --text-secondary: #e2e8f0;
-    --text-muted: #94a3b8;
-    --bg-dark: #0f0f23;
-    --bg-darker: #050517;
-    --bg-card: rgba(255, 255, 255, 0.05);
-    --border-color: rgba(255, 255, 255, 0.1);
-    --glass-bg: rgba(255, 255, 255, 0.08);
-    --glass-border: rgba(255, 255, 255, 0.2);
+    --primary-color: #4f46e5;
+    --secondary-color: #312e81;
+    --accent: #fbbf24;
+    --accent-dark: #b45309;
+    --text-primary: #f3f4f6;
+    --text-secondary: #a1a1aa;
+    --text-muted: #6b7280;
+    --bg-dark: #18181b;
+    --bg-darker: #09090b;
+    --bg-card: rgba(36, 37, 46, 0.95);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(36, 37, 46, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --shadow: 0 4px 32px rgba(36, 37, 46, 0.18);
 }
 
 body {
@@ -320,19 +322,29 @@ nav .mobile-toggle {
 .cta-button {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 15px 30px;
-    background: linear-gradient(135deg, #4ade80 0%, #06b6d4 100%);
-    color: var(--text-primary);
-    text-decoration: none;
-    border-radius: 50px;
+    gap: 8px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
     font-weight: 600;
-    transition: all 0.3s ease;
-    opacity: 0;
-    animation: fadeInUp 1s ease-out 1.5s forwards;
-    position: relative;
-    overflow: hidden;
+    font-size: 1rem;
+    padding: 12px 28px;
     border: none;
+    border-radius: 32px;
+    box-shadow: 0 2px 16px rgba(79, 70, 229, 0.08);
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+    position: relative;
+    text-decoration: none;
+    outline: none;
+}
+.cta-button:hover, .cta-button:focus {
+    background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+    color: #18181b;
+    box-shadow: 0 4px 32px rgba(251, 191, 36, 0.18);
+    transform: translateY(-2px) scale(1.03);
+}
+.cta-button i {
+    font-size: 1.1em;
 }
 
 .cta-button::before {
@@ -357,8 +369,8 @@ nav .mobile-toggle {
 
 /* Section Styling */
 .section {
-    padding: 100px 0;
-    position: relative;
+    padding: 80px 0 60px 0;
+    background: transparent;
 }
 
 .container {
@@ -368,24 +380,23 @@ nav .mobile-toggle {
 }
 
 .section-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: 2.5rem;
     font-weight: 700;
-    text-align: left;
-    margin-bottom: 40px;
-    color: #ffffff;
+    color: var(--accent);
+    margin-bottom: 32px;
+    letter-spacing: -0.01em;
+    text-align: center;
     position: relative;
-    display: inline-block;
 }
-
 .section-title::after {
     content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
+    display: block;
+    margin: 18px auto 0 auto;
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, #4ade80, #06b6d4);
     border-radius: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent));
+    opacity: 0.7;
 }
 
 /* About Section - Consistent Styling */
@@ -589,26 +600,31 @@ nav .mobile-toggle {
 
 .social-links {
     display: flex;
-    gap: 15px;
-    margin-top: 30px;
+    gap: 18px;
+    margin-top: 18px;
+    justify-content: flex-start;
 }
 
 .social-link {
-    width: 40px;
-    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    color: var(--text-primary);
-    transition: all 0.3s ease;
+    background: var(--bg-card);
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    border: 1.5px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(36, 37, 46, 0.08);
+    transition: background 0.3s, color 0.3s, border 0.3s, transform 0.2s;
 }
 
-.social-link:hover {
-    background: var(--primary-color);
-    transform: translateY(-2px);
+.social-link:hover, .social-link:focus {
+    background: var(--accent);
+    color: #18181b;
+    border-color: var(--accent);
+    transform: scale(1.08);
 }
 
 .social-link i {
@@ -753,11 +769,10 @@ nav .mobile-toggle {
     }
 
     .section {
-        padding: 60px 0;
+        padding: 48px 0 32px 0;
     }
 
     .section-title {
-        text-align: center;
         font-size: 2rem;
     }
 
@@ -841,6 +856,14 @@ nav .mobile-toggle {
     .skill-item {
         padding: 15px;
         background: rgba(15, 15, 35, 0.8);
+    }
+    .stat-card, .skill-item, .service-card, .portfolio-item {
+        padding: 18px 10px;
+    }
+    .social-link {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
     }
 }
 
@@ -1016,4 +1039,16 @@ nav ul li a.active::after {
 .portfolio-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(74, 222, 128, 0.3);
+}
+
+.resume-btn, .cta-button[download] {
+    background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+    color: #18181b;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 2px 16px rgba(251, 191, 36, 0.10);
+}
+.resume-btn:hover, .cta-button[download]:hover {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
 }
