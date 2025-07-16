@@ -1,0 +1,39 @@
+%PDF-1.4
+% Professional resume for Shilpa Shree
+% This is a placeholder. Please replace with a real PDF if you want a custom-designed resume.
+% For now, I will create a simple text-based PDF with the following content:
+
+1. Contact
+   - Email: shreesvshilpa@gmail.com
+   - Location: Bengaluru, Karnataka, India
+   - LinkedIn: linkedin.com/in/your-link
+   - GitHub: github.com/your-github
+
+2. Professional Summary
+   AI Software Developer at Thorsignia with 2+ years of experience in building intelligent, scalable solutions. Strong background in Python full stack development and a passion for deploying machine learning models and AI-driven features.
+
+3. Skills
+   - AI & Machine Learning: Deep Learning, NLP, Computer Vision
+   - Python Stack: Django, Flask, FastAPI, Data Science
+   - Frontend: HTML5, CSS3, JavaScript, React
+   - Databases: MariaDB, Oracle, MySQL, PostgreSQL
+
+4. Experience
+   Thorsignia, AI Software Developer
+   - Building and deploying AI-powered solutions for enterprise clients
+   - Collaborating with cross-functional teams to deliver robust software
+
+   Python Full Stack Developer (Previous Role)
+   - Developed and maintained web applications using Python frameworks
+   - Integrated AI features into full stack solutions
+
+5. Education
+   Bachelor’s Degree in Computer Science (or your degree)
+   University Name, Year
+
+6. Projects
+   - AI Intelligence Platform: Developed advanced AI solutions for automated decision-making and data processing.
+   - Python Web Application: Built a full-stack web application with modern UI and robust backend.
+   - Social Media App: Crafted seamless social experiences, combining functionality with aesthetics.
+
+% End of resume 
